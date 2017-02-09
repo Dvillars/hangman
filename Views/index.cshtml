@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Hangman</h1>
+
+  </div>
+  <div class="row">
+    <form action="/Game" method="post">
+      <label for="new-answer">Enta ya Word Bro</label>
+      <input type="text" name="new-answer" id="new-answer">
+      <button type="submit">Submit Word</button>
+    </form>
+  </div>
+</div>

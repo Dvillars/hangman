@@ -1,0 +1,13 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>Hangman</h2>
+  </div>
+  <div>
+    <div> @Model.GetResult() </div>
+    <div> @Model.ListToString() </div>
+  </div>
+</div>
