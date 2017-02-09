@@ -2,12 +2,27 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<div class="container">
   <div class="jumbotron">
     <h2>Hangman</h2>
   </div>
+
   <div>
-    <div> @Model.GetResult() </div>
-    <div> @Model.ListToString() </div>
+    <div> @Model.GetResult(); </div>
+    <div> @Model.GetCurrentState(); </div>
   </div>
-</div>
+
+  <div class="row">
+    <form action="/Guessed" method="post">
+      <label for="guess">Enter your guess here: </label>
+      <input type="text" name="guess" id="guess">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="row">
+    <form action="/Answer" method="post">
+      <label for="word-guess">Enter your word guess here: </label>
+      <input type="text" name="word-guess" id="word-guess">
+      <button type="submit">Enter Word Guess</button>
+    </form>
+  </div>
